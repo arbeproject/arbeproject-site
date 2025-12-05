@@ -1,0 +1,13 @@
+{
+  "name": "arbeproject-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^4.0.0"
+  }
+}

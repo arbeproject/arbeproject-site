@@ -1,0 +1,256 @@
+---
+const { title = "ARBE Project", description = "Algorithmic Resource‑Based Economy & AMN Sovereign Digital Currency" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: dark light;
+        --bg: #050816;
+        --bg-alt: #0b1020;
+        --fg: #f5f5f5;
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.12);
+        --muted: #9ca3af;
+        --border: rgba(148, 163, 184, 0.25);
+        --radius-xl: 18px;
+        --radius-lg: 12px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #0b1020 0, #020617 40%, #000 100%);
+        color: var(--fg);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .shell {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+        background: linear-gradient(
+          to bottom,
+          rgba(2, 6, 23, 0.9),
+          rgba(2, 6, 23, 0.6),
+          transparent
+        );
+        border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      }
+
+      .nav {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0.9rem 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 35%, #020617 70%);
+        box-shadow:
+          0 0 30px rgba(56, 189, 248, 0.5),
+          0 0 0 1px rgba(15, 23, 42, 0.7);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-title {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .brand-subtitle {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .nav-link {
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        color: var(--muted);
+      }
+
+      .nav-link:hover {
+        border-color: var(--border);
+        background: rgba(15, 23, 42, 0.8);
+        color: #e5e7eb;
+        text-decoration: none;
+      }
+
+      .nav-link.primary {
+        border-color: rgba(56, 189, 248, 0.4);
+        background: linear-gradient(
+          to right,
+          rgba(56, 189, 248, 0.15),
+          rgba(59, 130, 246, 0.1)
+        );
+        color: #e5faff;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .main-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.5rem 1.4rem 2.4rem;
+      }
+
+      footer {
+        border-top: 1px solid rgba(15, 23, 42, 0.9);
+        background: #020617;
+      }
+
+      .footer-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.2rem 1.4rem 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.18rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid rgba(75, 85, 99, 0.55);
+        background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+        font-size: 0.7rem;
+        color: var(--muted);
+      }
+
+      .pill-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: #22c55e;
+        box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          padding-inline: 1rem;
+        }
+
+        .nav-links {
+          justify-content: flex-end;
+        }
+
+        .main-inner {
+          padding-inline: 1rem;
+        }
+
+        .footer-inner {
+          padding-inline: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <nav class="nav">
+          <a href="/" class="brand">
+            <div class="logo" />
+            <div class="brand-text">
+              <span class="brand-title">ARBE Project</span>
+              <span class="brand-subtitle">Algorithmic Resource‑Based Economy</span>
+            </div>
+          </a>
+          <div class="nav-links">
+            <a class="nav-link" href="/docs">Docs</a>
+            <a class="nav-link" href="/whitepaper">Whitepaper</a>
+            <a class="nav-link" href="/protocols">Protocols</a>
+            <a class="nav-link" href="/slp">SLP</a>
+            <a class="nav-link" href="/rtm">RTM</a>
+            <a class="nav-link" href="/ama">AMA</a>
+            <a class="nav-link primary" href="/legal">Legal</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="main-inner">
+          <slot />
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <span class="pill">
+              <span class="pill-dot"></span>
+              <span>Public, auditable & sovereign monetary research</span>
+            </span>
+            <a class="pill" href="/whitepaper">Whitepaper</a>
+            <a class="pill" href="/docs">Overview</a>
+            <a class="pill" href="/protocols">Technical specs</a>
+          </div>
+          <div>© {new Date().getFullYear()} ARBE Project. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

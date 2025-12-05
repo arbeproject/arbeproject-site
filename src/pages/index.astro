@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="ARBE Project – Algorithmic Resource‑Based Economy">
+  <section
+    style="
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.4rem;
+      align-items: center;
+    "
+  >
+    <div>
+      <div
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.25rem 0.75rem;
+          border-radius: 999px;
+          border: 1px solid rgba(148, 163, 184, 0.4);
+          background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+          margin-bottom: 1.4rem;
+          font-size: 0.75rem;
+        "
+      >
+        <span
+          style="
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+          "
+        />
+        <span>Research proposal – AMN sovereign digital currency</span>
+      </div>
+
+      <h1
+        style="
+          font-size: clamp(2.4rem, 3vw + 1.6rem, 3.4rem);
+          line-height: 1.05;
+          letter-spacing: -0.03em;
+          margin: 0 0 1rem;
+        "
+      >
+        From debt‑based money<br />to a resource‑aligned economy.
+      </h1>
+
+      <p
+        style="
+          max-width: 38rem;
+          color: #9ca3af;
+          font-size: 0.98rem;
+          line-height: 1.6;
+          margin-bottom: 1.4rem;
+        "
+      >
+        ARBE (Algorithmic Resource‑Based Economy) and the AMN sovereign digital currency
+        propose a new monetary framework: public, auditable and algorithmically governed,
+        where money is no longer a tool of debt and control, but a neutral medium to
+        exchange human work and real resources.
+      </p>
+
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.9rem;
+          margin-bottom: 1.8rem;
+        "
+      >
+        <a
+          href="/whitepaper"
+          style="
+            padding: 0.65rem 1.3rem;
+            border-radius: 999px;
+            border: 1px solid rgba(56, 189, 248, 0.5);
+            background: linear-gradient(
+              to right,
+              rgba(56, 189, 248, 0.18),
+              rgba(129, 140, 248, 0.16)
+            );
+            font-size: 0.9rem;
+            font-weight: 500;
+          "
+        >
+          Read the whitepaper
+        </a>
+        <a
+          href="/docs"
+          style="
+            padding: 0.65rem 1.3rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            background: rgba(15, 23, 42, 0.9);
+            font-size: 0.9rem;
+            color: #e5e7eb;
+          "
+        >
+          Overview & motivation
+        </a>
+      </div>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 0.9rem;
+          max-width: 32rem;
+          font-size: 0.78rem;
+          color: #9ca3af;
+        "
+      >
+        <div>
+          <div style="font-weight: 600; color: #e5e7eb; margin-bottom: 0.15rem;">
+            Monetary stability
+          </div>
+          <div>Algorithmic PID controller targeting structural inflation ≈ 0.</div>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #e5e7eb; margin-bottom: 0.15rem;">
+            Resource‑anchored
+          </div>
+          <div>
+            Money supply linked to real, measurable resources and productive capacity.
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: #e5e7eb; margin-bottom: 0.15rem;">
+            Public & auditable
+          </div>
+          <div>
+            Open, sovereign ledger with cryptographic audit of every monetary action.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        border-radius: 24px;
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        background:
+          radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%),
+          radial-gradient(circle at bottom, rgba(37, 99, 235, 0.2), #020617);
+        padding: 1.4rem 1.5rem 1.6rem;
+        box-shadow:
+          0 24px 70px rgba(15, 23, 42, 0.9),
+          0 0 0 1px rgba(15, 23, 42, 0.9);
+      "
+    >
+      <h2
+        style="
+          font-size: 1rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #e5e7eb;
+          margin-top: 0;
+          margin-bottom: 0.8rem;
+        "
+      >
+        ARBE Stack
+      </h2>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+          gap: 1.1rem;
+          font-size: 0.8rem;
+          color: #e5e7eb;
+        "
+      >
+        <div
+          style="
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            padding: 0.9rem;
+            background: rgba(15, 23, 42, 0.95);
+          "
+        >
+          <div style="font-weight: 600; margin-bottom: 0.45rem;">Monetary core</div>
+          <ul style="margin: 0; padding-left: 1.1rem; color: #9ca3af;">
+            <li>AMN – sovereign digital unit of account</li>
+            <li>PID‑based monetary controller u(t)</li>
+            <li>Public, read‑only parameters Kₚ, Kᵢ, Kd</li>
+          </ul>
+        </div>
+        <div
+          style="
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            padding: 0.9rem;
+            background: rgba(15, 23, 42, 0.9);
+          "
+        >
+          <div style="font-weight: 600; margin-bottom: 0.45rem;">Data & resources</div>
+          <ul style="margin: 0; padding-left: 1.1rem; color: #9ca3af;">
+            <li>RTM – Resource Token Model</li>
+            <li>h(S(t)) &amp; Φ(Q(t)) functions</li>
+            <li>Certified sensors &amp; resource feeds</li>
+          </ul>
+        </div>
+        <div
+          style="
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            padding: 0.9rem;
+            background: rgba(15, 23, 42, 0.92);
+          "
+        >
+          <div style="font-weight: 600; margin-bottom: 0.45rem;">Ledger & governance</div>
+          <ul style="margin: 0; padding-left: 1.1rem; color: #9ca3af;">
+            <li>SLP – Sovereign Ledger Protocol</li>
+            <li>AMA – Algorithmic Monetary Authority</li>
+            <li>Multi‑layer, anti‑capture governance</li>
+          </ul>
+        </div>
+        <div
+          style="
+            border-radius: 16px;
+            border: 1px solid rgba(56, 189, 248, 0.6);
+            padding: 0.9rem;
+            background: linear-gradient(
+              to bottom right,
+              rgba(56, 189, 248, 0.2),
+              rgba(15, 23, 42, 0.96)
+            );
+          "
+        >
+          <div style="font-weight: 600; margin-bottom: 0.45rem;">Purpose</div>
+          <p style="margin: 0; color: #e5e7eb;">
+            Transform money from a mechanism of debt and control into what it should have
+            always been: a transparent, stable and just medium to exchange human work and
+            coordinate real resources.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

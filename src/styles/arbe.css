@@ -1,0 +1,70 @@
+/* ARBE Corporate Style */
+
+:root {
+  --arbe-blue: #2A4D8F;
+  --arbe-teal: #1FA8A8;
+  --arbe-yellow: #FFD86E;
+  --arbe-gray: #F4F6FA;
+  --arbe-dark: #2B2B2B;
+
+  --font-body: "Inter", "Roboto", "Helvetica Neue", sans-serif;
+  --font-title: "Poppins", "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: var(--arbe-dark);
+  font-family: var(--font-body);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  color: var(--arbe-blue);
+  font-weight: 600;
+}
+
+a {
+  color: var(--arbe-teal);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Box */
+.card {
+  padding: 1.5rem;
+  background: var(--arbe-gray);
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--arbe-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1F3972;
+}
+
+.btn-teal {
+  background: var(--arbe-teal);
+  color: white;
+}
+
+.btn-teal:hover {
+  background: #188787;
+}

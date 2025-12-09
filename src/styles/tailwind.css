@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Aquí puedes mezclar tu estilo ARBE si quieres */
-@import "./arbe.css";
+/* Opcional: si quieres que tailwind pueda extender variables */
+@theme {
+  --color-arbe-blue: #2A4D8F;
+  --color-arbe-teal: #1FA8A8;
+  --color-arbe-yellow: #FFD86E;
+  --color-arbe-gray: #F4F6FA;
+  --color-arbe-dark: #2B2B2B;
+
+  --font-body: "Inter", "Roboto", "Helvetica Neue", sans-serif;
+  --font-title: "Poppins", "Inter", sans-serif;
+}
+

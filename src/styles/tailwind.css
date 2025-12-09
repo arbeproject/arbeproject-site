@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aquí puedes mezclar tu estilo ARBE si quieres */
+@import "./arbe.css";

@@ -2,44 +2,31 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="ARBE Project" description="Moneda algorítmica soberana">
-  <section class="p-8">
-    <div class="card mb-6">
-      <h1 class="text-3xl font-bold mb-2">
-        Bienvenido a ARBE
-      </h1>
-      <p class="mb-4">
-        Esta página usa <span class="font-semibold">ARBE CSS</span> + <span class="text-blue-600">Tailwind</span>.
+<BaseLayout title="ARBE Project" description="Algorithmic Resource-Based Economy">
+  <section class="px-6 py-12 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-arbe-blue mb-4">
+      ARBE · Algorithmic Resource-Based Economy
+    </h1>
+
+    <p class="mb-6 text-lg">
+      Diseño de una moneda algorítmica soberana, con foco en recursos reales y
+      bienestar colectivo.
+    </p>
+
+    <div class="card">
+      <p>
+        Esta tarjeta usa <code>.card</code> de <strong>arbe.css</strong> +
+        clases utilitarias de Tailwind si quieres añadir más estilos.
       </p>
-      <button class="btn btn-primary mr-3">
-        Botón ARBE
-      </button>
-      <button class="btn btn-teal">
-        Acción secundaria
-      </button>
     </div>
 
-    <div class="grid gap-4 md:grid-cols-3">
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">Estabilidad</h2>
-        <p class="text-sm text-slate-700">
-          Diseño limpio, fondo blanco, colores amigables.
-        </p>
-      </div>
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">Transparencia</h2>
-        <p class="text-sm text-slate-700">
-          ARBE como moneda algorítmica legible para humanos.
-        </p>
-      </div>
-      <div class="card">
-        <h2 class="text-xl font-semibold mb-2">Sostenibilidad</h2>
-        <p class="text-sm text-slate-700">
-          Pensada para una economía basada en recursos.
-        </p>
-      </div>
+    <div class="mt-6 flex gap-3">
+      <a class="btn btn-primary" href="/whitepaper">
+        Ver whitepaper técnico
+      </a>
+      <a class="btn btn-teal" href="/overview">
+        Versión divulgativa
+      </a>
     </div>
   </section>
 </BaseLayout>
-
-

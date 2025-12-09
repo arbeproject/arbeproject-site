@@ -1,8 +1,8 @@
 ---
-import "../styles/arbe.css";
-import "../styles/tailwind.css";
+import "../styles/global.css";  // Tailwind + ARBE
 const { title = "ARBE Project", description = "" } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,11 +10,12 @@ const { title = "ARBE Project", description = "" } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="arbe-page">
-    <main>
+  <body class="arbe-page bg-white text-slate-900">
+    <main class="min-h-screen">
       <slot />
     </main>
   </body>
 </html>
+
 
 

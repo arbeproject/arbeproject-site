@@ -1,9 +1,9 @@
 ---
-import "../styles/tailwind.css";  // Tailwind primero
-import "../styles/arbe.css";      // ARBE después (puede sobreescribir si hace falta)
+import "../styles/tailwind.css";
 
 const { title = "ARBE Project", description = "" } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,8 +11,8 @@ const { title = "ARBE Project", description = "" } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="arbe-page bg-white text-arbe-dark font-sans">
-    <main class="min-h-screen">
+  <body class="arbe-page">
+    <main class="arbe-container py-8 md:py-12">
       <slot />
     </main>
   </body>

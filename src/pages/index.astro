@@ -1,17 +1,45 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<section class="min-h-screen flex flex-col items-center justify-center gap-6 bg-[var(--arbe-gray)]">
-  <h1 class="text-4xl md:text-5xl font-semibold text-[var(--arbe-blue)]">
-    ARBE Project
-  </h1>
-  <p class="max-w-xl text-center text-lg text-[var(--arbe-dark)]">
-    Moneda algorítmica soberana alineada con una economía basada en recursos.
-  </p>
-  <div class="flex gap-4">
-    <a class="btn btn-primary" href="/whitepaper">Whitepaper</a>
-    <a class="btn btn-teal" href="/vision">Visión</a>
-  </div>
-</section>
+<BaseLayout title="ARBE Project" description="Moneda algorítmica soberana">
+  <section class="p-8">
+    <div class="card mb-6">
+      <h1 class="text-3xl font-bold mb-2">
+        Bienvenido a ARBE
+      </h1>
+      <p class="mb-4">
+        Esta página usa <span class="font-semibold">ARBE CSS</span> + <span class="text-blue-600">Tailwind</span>.
+      </p>
+      <button class="btn btn-primary mr-3">
+        Botón ARBE
+      </button>
+      <button class="btn btn-teal">
+        Acción secundaria
+      </button>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-2">Estabilidad</h2>
+        <p class="text-sm text-slate-700">
+          Diseño limpio, fondo blanco, colores amigables.
+        </p>
+      </div>
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-2">Transparencia</h2>
+        <p class="text-sm text-slate-700">
+          ARBE como moneda algorítmica legible para humanos.
+        </p>
+      </div>
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-2">Sostenibilidad</h2>
+        <p class="text-sm text-slate-700">
+          Pensada para una economía basada en recursos.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
 

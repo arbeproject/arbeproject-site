@@ -1,22 +1,20 @@
 ---
 import "../styles/arbe.css";
 import "../styles/tailwind.css";
-
 const { title = "ARBE Project", description = "" } = Astro.props;
 ---
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-
-  <body class="arbe-page bg-white text-arbe-dark font-body">
-    <main class="p-6">
+  <body class="arbe-page">
+    <main>
       <slot />
     </main>
   </body>
 </html>
+
 

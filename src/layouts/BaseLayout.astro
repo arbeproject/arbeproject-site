@@ -1,10 +1,9 @@
 ---
-import "../styles/tailwind.css";  // Tailwind v4
-import "../styles/arbe.css";      // Tu tema corporativo ARBE
+import "../styles/tailwind.css";
+import "../styles/arbe.css";
 
 const { title = "ARBE Project", description = "" } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,12 +11,13 @@ const { title = "ARBE Project", description = "" } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="arbe-page bg-white text-slate-900">
-    <main class="min-h-screen">
+  <body class="arbe-page">
+    <main>
       <slot />
     </main>
   </body>
 </html>
+
 
 
 

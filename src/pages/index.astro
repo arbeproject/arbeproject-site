@@ -1,15 +1,17 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
 ---
-<BaseLayout title="ARBE Project – Official site">
-  <section class="arbe-card">
-    <h1 class="arbe-title">ARBE Project</h1>
-    <p class="arbe-subtitle">
-      Algorithmic Resource-Based Economy & AMN digital currency.
-    </p>
 
-    <button class="arbe-btn-primary">
-      Read the whitepaper
-    </button>
-  </section>
-</BaseLayout>
+<section class="min-h-screen flex flex-col items-center justify-center gap-6 bg-[var(--arbe-gray)]">
+  <h1 class="text-4xl md:text-5xl font-semibold text-[var(--arbe-blue)]">
+    ARBE Project
+  </h1>
+  <p class="max-w-xl text-center text-lg text-[var(--arbe-dark)]">
+    Moneda algorítmica soberana alineada con una economía basada en recursos.
+  </p>
+  <div class="flex gap-4">
+    <a class="btn btn-primary" href="/whitepaper">Whitepaper</a>
+    <a class="btn btn-teal" href="/vision">Visión</a>
+  </div>
+</section>
+

@@ -1,19 +1,310 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "ARBE Monetary Network";
+const description =
+  "A sovereign, algorithmic, resource-based monetary system aligned with real resources, social justice, and ecological limits.";
 ---
 
-<BaseLayout title="ARBE Project" description="Algoritmic Resource-Based Economy">
-  <section class="arbe-card">
-    <h1 class="arbe-section-title">ARBE Project</h1>
-    <p class="arbe-section-subtitle">
-      Diseño limpio, fondo blanco, tipografía amable y colores ARBE para explicar tu
-      modelo de moneda algorítmica y economía basada en recursos.
-    </p>
+<BaseLayout {title} {description}>
+  {/* Hero */}
+  <section class="arbe-page min-h-[70vh] flex items-center px-6 py-16 sm:px-10 lg:px-20">
+    <div class="max-w-6xl mx-auto grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] items-center">
+      <div>
+        <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-[var(--arbe-teal)] mb-4">
+          AMN / ARBE • Monetary Redesign
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[var(--arbe-blue)] mb-6">
+          From debt-money to a transparent, fair, and stable medium of exchange.
+        </h1>
+        <p class="text-base sm:text-lg text-[var(--arbe-dark)] mb-6 max-w-2xl">
+          The purpose of the <strong>Algorithmic Monetary Network (AMN)</strong> and the
+          <strong> ARBE currency</strong> is to transform money from an instrument of debt,
+          inequality, and control into what it should have always been: a transparent,
+          predictable, and stable way to exchange work and coordinate real resources.
+        </p>
+        <p class="text-sm sm:text-base text-[var(--arbe-dark)]/80 mb-8 max-w-2xl">
+          Today&apos;s monetary creation model is structurally misaligned with the common good.
+          It is driven by private credit expansion instead of real productive capacity,
+          ecological limits, or the long-term well-being of society.
+        </p>
 
-    <div class="flex flex-wrap gap-3">
-      <button class="btn btn-primary">Whitepaper técnico</button>
-      <button class="btn btn-teal">Versión divulgativa</button>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="#problems"
+            class="btn btn-primary"
+          >
+            Why the current system fails
+          </a>
+          <a
+            href="#technology"
+            class="btn btn-teal"
+          >
+            The ARBE technological paradigm
+          </a>
+        </div>
+      </div>
+
+      <div class="card shadow-sm border border-slate-200/70 bg-[var(--arbe-gray)]">
+        <h2 class="text-sm font-semibold tracking-[0.2em] uppercase text-[var(--arbe-teal)] mb-2">
+          At a glance
+        </h2>
+        <p class="text-sm text-[var(--arbe-dark)] mb-4">
+          ARBE is a <strong>sovereign, digital, algorithmic currency</strong> whose issuance
+          is tied to measurable real-world variables:
+        </p>
+        <ul class="text-sm space-y-1 text-[var(--arbe-dark)]">
+          <li>• Renewable energy availability and capacity</li>
+          <li>• Sustainable productive output and logistics</li>
+          <li>• Territorial resources and ecological limits</li>
+          <li>• Social and constitutional objectives (equality, cohesion, sovereignty)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Section: Systemic problems of debt-based money */}
+  <section
+    id="problems"
+    class="px-6 py-16 sm:px-10 lg:px-20 bg-white border-y border-slate-100"
+  >
+    <div class="max-w-6xl mx-auto">
+      <header class="max-w-3xl mb-10">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--arbe-blue)] mb-4">
+          What is structurally wrong with the current monetary creation model?
+        </h2>
+        <p class="text-base text-[var(--arbe-dark)]/85">
+          In most contemporary economies, money is created almost entirely through private
+          bank credit. This design systematically amplifies inequality, instability, and
+          ecological damage instead of correcting them.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {/* Inequality & poverty */}
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            1. Extreme inequality & structural poverty
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            Credit-based issuance primarily benefits those who already own assets, collateral,
+            and privileged access to finance. This leads to:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Growing wealth concentration in upper strata</li>
+            <li>• Financial exclusion of large segments of the population</li>
+            <li>• Persistent increases in inequality indicators</li>
+            <li>• Territorial and generational gaps becoming permanent</li>
+          </ul>
+        </article>
+
+        {/* Debt & inflation */}
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            2. Perpetual debt & chronic inflation
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            Since almost all money is born as bank debt:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Every monetary unit carries debt from the moment it is created</li>
+            <li>• The system requires constant re-indebtedness to avoid contraction</li>
+            <li>• Households, companies, and States are locked into long-term debt cycles</li>
+            <li>• Inflation becomes structural, eroding wages and savings over time</li>
+          </ul>
+        </article>
+
+        {/* Economic slavery & misaligned incentives */}
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            3. Modern economic servitude & misaligned incentives
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            To access basic goods like housing, education, or healthcare, citizens must often
+            chain decades of their life to debt repayment. The system:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Converts human time and work into streams of interest payments</li>
+            <li>• Prioritizes financial returns over social well-being</li>
+            <li>• Rewards speculation over real production and innovation</li>
+          </ul>
+        </article>
+
+        {/* Ecology, resources & geopolitics */}
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            4. Ecological destruction & geopolitical dependence
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            A credit-driven growth paradigm pushes:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Unlimited extraction of natural resources</li>
+            <li>• Systematic externalization of environmental costs</li>
+            <li>• Competition and conflict over scarce strategic resources</li>
+            <li>• Dependence on foreign payment and settlement infrastructures (e.g. SWIFT)</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-10 text-sm text-[var(--arbe-dark)]/80 max-w-3xl">
+        <p class="mb-3">
+          These dynamics generate an environment of recurring bubbles, cycles of inflation
+          and deflation, speculative pressure on essential goods (food, water, housing,
+          healthcare), and the erosion of a State&apos;s ability to plan its own economy
+          and protect the public interest.
+        </p>
+        <p>
+          ARBE is designed as a scientific, rule-based alternative: a monetary system that
+          aligns issuance with real resources, social cohesion, and ecological boundaries.
+        </p>
+      </div>
+
+      <div class="mt-8">
+        <a href="/problems" class="text-sm font-semibold text-[var(--arbe-teal)] underline-offset-4 hover:underline">
+          Read the full systemic problem analysis →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Section: Technology & new paradigm */}
+  <section
+    id="technology"
+    class="px-6 py-16 sm:px-10 lg:px-20 bg-[var(--arbe-gray)]"
+  >
+    <div class="max-w-6xl mx-auto">
+      <header class="max-w-3xl mb-10">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--arbe-blue)] mb-4">
+          The available technology enables a new monetary paradigm.
+        </h2>
+        <p class="text-base text-[var(--arbe-dark)]/85">
+          For the first time in history, digital infrastructure, cryptography, sensing,
+          and control theory allow us to design a <strong>scientific monetary system</strong>,
+          governed by objective rules rather than discretionary decisions or private interests.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            Real-time economic & energy sensing
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            The digitalization of critical infrastructure (energy, water, logistics,
+            transport, agriculture, industry) enables:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Measuring productive capacity in real time</li>
+            <li>• Tracking resource levels and availability</li>
+            <li>• Linking monetary issuance to physical, observable variables</li>
+          </ul>
+        </article>
+
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            Control theory & automatic regulation
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            Monetary policy can be implemented as an <strong>algorithmic controller</strong>
+            that:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Detects deviations and imbalances</li>
+            <li>• Adjusts issuance and destruction of money automatically</li>
+            <li>• Prevents overheating and deep recessions</li>
+            <li>• Remains independent from political and electoral cycles</li>
+          </ul>
+        </article>
+
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            Cryptography, auditability & sovereign ledgers
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            Modern cryptography and distributed ledgers allow:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Immutable recording of all monetary operations</li>
+            <li>• Real-time public and institutional auditing</li>
+            <li>• Protection against political or private manipulation</li>
+            <li>• Operation of sovereign payment networks independent of SWIFT and foreign rails</li>
+          </ul>
+        </article>
+
+        <article class="card h-full">
+          <h3 class="text-lg font-semibold text-[var(--arbe-blue)] mb-2">
+            Algorithmic intelligence & constitutional alignment
+          </h3>
+          <p class="text-sm text-[var(--arbe-dark)] mb-3">
+            ARBE embeds constitutional and ecological principles directly into its
+            monetary rules:
+          </p>
+          <ul class="text-sm text-[var(--arbe-dark)] space-y-1">
+            <li>• Equality, social justice, and territorial cohesion</li>
+            <li>• Ecological sustainability and resource preservation</li>
+            <li>• National sovereignty and resilience</li>
+            <li>• Continuous adjustment based on predictive models and real data</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-10 max-w-3xl text-sm text-[var(--arbe-dark)]/85">
+        <p class="mb-3">
+          Under this framework, the money supply no longer expands based on private credit
+          and speculative expectations, but according to:
+        </p>
+        <ul class="space-y-1">
+          <li>• Available renewable energy</li>
+          <li>• Sustainable productive capacity</li>
+          <li>• Quantified territorial resources</li>
+          <li>• The country&apos;s efficiency and social objectives</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {/* Section: Towards a sovereign digital currency */}
+  <section class="px-6 py-16 sm:px-10 lg:px-20 bg-white">
+    <div class="max-w-5xl mx-auto card">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--arbe-blue)] mb-4">
+        Towards a sovereign, audit-able digital currency.
+      </h2>
+      <p class="text-sm sm:text-base text-[var(--arbe-dark)] mb-3">
+        Building on the above diagnosis and the technological capabilities now available,
+        the AMN/ARBE framework proposes a <strong>new monetary constitutional order</strong>
+        in which:
+      </p>
+      <ul class="text-sm sm:text-base text-[var(--arbe-dark)] space-y-1 mb-4">
+        <li>• A new sovereign digital currency is created and managed algorithmically.</li>
+        <li>• A national payment infrastructure operates independently from foreign systems.</li>
+        <li>• Rules for the creation and destruction of money are explicit, auditable, and transparent.</li>
+        <li>• Continuous public oversight and real-time auditing are mandatory.</li>
+        <li>• The economy gradually transitions towards a resource-based, digitally quantified model.</li>
+      </ul>
+      <p class="text-sm sm:text-base text-[var(--arbe-dark)]">
+        ARBE is not just another digital token. It is a proposal to redesign the
+        <strong>foundations of money</strong> so that monetary creation serves society,
+        the ecosystem, and future generations — instead of subordinating them to
+        speculative finance.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="/whitepaper"
+          class="btn btn-primary"
+        >
+          Read the full AMN / ARBE Whitepaper
+        </a>
+        <a
+          href="/architecture"
+          class="btn btn-teal"
+        >
+          Explore the technical architecture
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
+
 

@@ -1,0 +1,7 @@
+/* src/styles/global.css */
+
+/* 1) Carga Tailwind 4 */
+@import "tailwindcss";
+
+/* 2) Carga tu estilo corporativo ARBE */
+@import "./arbe.css";

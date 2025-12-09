@@ -20,12 +20,6 @@ body {
   line-height: 1.7;
 }
 
-.arbe-page {
-  background: white;
-  color: var(--arbe-dark);
-}
-
-
 h1, h2, h3, h4 {
   font-family: var(--font-title);
   color: var(--arbe-blue);
@@ -74,5 +68,3 @@ a:hover {
 .btn-teal:hover {
   background: #188787;
 }
-
-

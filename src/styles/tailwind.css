@@ -1,5 +1,18 @@
 /* src/styles/tailwind.css */
+
+/* Activa Tailwind v4 */
 @import "tailwindcss";
 
-/* Aquí puedes extender cosas generales si quieres, pero
-   como ya tienes arbe.css, lo dejamos limpio. */
+/* Tema ARBE, para usar clases tipo bg-arbe-blue, text-arbe-teal, etc. */
+@theme {
+  --color-arbe-blue: #2A4D8F;
+  --color-arbe-teal: #1FA8A8;
+  --color-arbe-yellow: #FFD86E;
+  --color-arbe-gray: #F4F6FA;
+  --color-arbe-dark: #2B2B2B;
+
+  --font-sans: "Inter", "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  --font-title: "Poppins", "Inter", system-ui, sans-serif;
+}
+

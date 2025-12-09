@@ -1,5 +1,3 @@
-/* ARBE Corporate Style */
-
 :root {
   --arbe-blue: #2A4D8F;
   --arbe-teal: #1FA8A8;
@@ -34,7 +32,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Box */
 .card {
   padding: 1.5rem;
   background: var(--arbe-gray);
@@ -42,7 +39,6 @@ a:hover {
   border: 1px solid #e5e5e5;
 }
 
-/* Buttons */
 .btn {
   display: inline-block;
   padding: .6rem 1.2rem;
@@ -68,3 +64,4 @@ a:hover {
 .btn-teal:hover {
   background: #188787;
 }
+

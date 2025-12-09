@@ -1,8 +1,9 @@
 ---
-import "../styles/global.css";  // Tailwind + ARBE
+import "../styles/arbe.css";        // tu estilo corporativo ARBE
+import "../styles/global.css";      // el CSS con @tailwind base/components/utilities
+
 const { title = "ARBE Project", description = "" } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +17,7 @@ const { title = "ARBE Project", description = "" } = Astro.props;
     </main>
   </body>
 </html>
+
 
 
 

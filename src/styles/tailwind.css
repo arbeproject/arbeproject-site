@@ -3,16 +3,84 @@
 /* Activa Tailwind v4 */
 @import "tailwindcss";
 
-/* Tema ARBE, para usar clases tipo bg-arbe-blue, text-arbe-teal, etc. */
-@theme {
-  --color-arbe-blue: #2A4D8F;
-  --color-arbe-teal: #1FA8A8;
-  --color-arbe-yellow: #FFD86E;
-  --color-arbe-gray: #F4F6FA;
-  --color-arbe-dark: #2B2B2B;
+/* Tema ARBE usando CSS variables (podemos mezclarlas con Tailwind) */
+:root {
+  --arbe-blue: #2A4D8F;
+  --arbe-teal: #1FA8A8;
+  --arbe-yellow: #FFD86E;
+  --arbe-gray: #F4F6FA;
+  --arbe-dark: #2B2B2B;
 
-  --font-sans: "Inter", "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", sans-serif;
-  --font-title: "Poppins", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", "Roboto", "Helvetica Neue", sans-serif;
+  --font-title: "Poppins", "Inter", sans-serif;
+}
+
+/* Base global con Tailwind + vars ARBE */
+@layer base {
+  body {
+    background: white;
+    color: var(--arbe-dark);
+    font-family: var(--font-body);
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-title);
+    color: var(--arbe-blue);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--arbe-teal);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Componentes ARBE como clases reutilizables */
+@layer components {
+  .arbe-page {
+    @apply min-h-screen bg-white;
+  }
+
+  .arbe-container {
+    @apply max-w-5xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .arbe-card {
+    @apply rounded-xl border border-slate-200 bg-[var(--arbe-gray)] p-6 shadow-sm;
+  }
+
+  .arbe-section-title {
+    @apply text-2xl md:text-3xl font-semibold mb-4;
+  }
+
+  .arbe-section-subtitle {
+    @apply text-slate-600 mb-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors;
+  }
+
+  .btn-primary {
+    background: var(--arbe-blue);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #1F3972;
+  }
+
+  .btn-teal {
+    background: var(--arbe-teal);
+    color: white;
+  }
+
+  .btn-teal:hover {
+    background: #188787;
+  }
 }
 

@@ -2,13 +2,14 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://www.arbeproject.org",
+  site: "https://arbeproject.github.io",   // dominio de GitHub Pages
+  base: "/arbeproject-site/",             // nombre del repo
   vite: {
     plugins: [tailwindcss()],
   },
 });
+
 
 
 
